@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+}
+@layer utilities {
+    .scrollbar-custom::-webkit-scrollbar {
+      width: 4px;
+      transition: opacity 0.5s ease-in-out;
+    }
+  
+    .scrollbar-custom::-webkit-scrollbar-track {
+        background:rgb(190, 190, 190);
+        border-radius: 4px;
+    }
+  
+    .scrollbar-custom::-webkit-scrollbar-thumb {
+         background:rgb(63, 140, 228);
+        //background:rgb(228, 123, 63); 
+         border-radius: 4px;
+    }
+  
+    .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+      background: #357acb; 
+      //background:rgb(203, 110, 53);
+    }
+}
+@layer utilities {
+    .scrollbar-visible::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+}
+/* @layer utilities {
+    .scrollbar-hidden::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+      display: none;
+    }
+} */
+
+/* <ServiceCard IMGurl={MB2SCard4IMG} name="Switch And Soket" service="Electric" />
+        <ServiceCard IMGurl={MB4SCard4IMG} name="Wiring" service="Electric" />
+        <ServiceCard IMGurl={MB1SCard4IMG} name="Appliances" service="Electric" />
+        <ServiceCard IMGurl={MB3SCard4IMG} name="Fan" service="Electric" /> */
